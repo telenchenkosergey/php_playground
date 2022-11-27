@@ -6,7 +6,7 @@ $minValue = min($myArr);
 $imax = array_search($maxValue ,$myArr);
 $imin = array_search($minValue, $myArr);
 
-if (abs($imax - $imin) == 1) {
+if (abs($imax - $imin) <= 1) {
     echo "Произведение не может быть вычислено";
 } else {
     if ($imin < $imax) {

@@ -9,10 +9,10 @@
 </head>
 <body>
     <?php
-        $rows = 20;
+        $rows = 15;
         $columns = 5;
         $fontColor = 0;
-        $step = 255 / $rows;
+        $step = 255 / ($rows - 1);
     ?>
     <table>
         <tr>
@@ -21,7 +21,8 @@
         </tr>
         <?php
         for ($i = 1; $i <= $rows; $i++) {
-            echo "<tr style='color: rgb($fontColor, $fontColor, $fontColor); background-color: slategrey;'>";
+            $fc = round($fontColor);
+            echo "<tr style='color: rgb($fc, $fc, $fc); background-color: slategrey;'>";
             echo "<td>$i</td>";
             for ($j = 1; $j <= $columns; $j++) {
                 $randNum = rand(1, 99);
