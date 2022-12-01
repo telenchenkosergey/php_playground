@@ -14,6 +14,7 @@
     Symfony Components. A set of decoupled and reusable components on which the best PHP applications are built, such as Drupal, phpBB, and eZ Publish.
     Symfony Community. A passionate group of over 600,000 developers from more than 120 countries, all committed to helping PHP surpass the impossible.
     Symfony Philosophy. Embracing and promoting professionalism, best practices, standardization and interoperability of applications.';
+    $text = str_replace("\r\n", "", $text);
     $textArr = array_count_values(str_split($text));
     asort($textArr);
     
