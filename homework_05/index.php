@@ -18,8 +18,10 @@ require_once "functions.php";
     <div>
         <?php
             foreach ($pageData as $post) {
-                echo "<div>$post</div>" . "<br>";
-                change_color($post, "Jay");
+                $bolderFirstLetter = make_first_letter_bold($post);
+                $changedColor = change_color($bolderFirstLetter, "было");
+                echo $changedColor;
+                echo "<br>";
                 echo get_statistics($post);
                 echo "<hr>";
             }
